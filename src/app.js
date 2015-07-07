@@ -1,4 +1,7 @@
-thermostat = new Thermostat();
+var thermostat = new Thermostat();
+var raiseButton = document.getElementById('raiseButton')
+var lowerButton = document.getElementById('lowerButton')
+
 
 var ThermoTempUpdate = function() {
   document.getElementById('thermostat').innerHTML = thermostat.temperature;
@@ -28,3 +31,6 @@ var ThermoAppPowerSavingToggle = function() {
   thermostat.powerSavingToggle();
   ThermoTempUpdate();
 };
+
+raiseButton.onclick = ThermoAppRaise
+lowerButton.onclick = ThermoAppLower
