@@ -12,8 +12,11 @@
 
 <body>
 <p id='thermostat'></p>
+
 <script> thermostat = new Thermostat();
   document.getElementById('thermostat').innerHTML = thermostat.temperature </script>
+
+  <button onclick="thermostat.raise();document.getElementById('thermostat').innerHTML = thermostat.temperature"> Tmp up </button>
 
 </body>
 </html>
