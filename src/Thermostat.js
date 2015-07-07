@@ -4,6 +4,10 @@ var Thermostat = function() {
   this.maxtemp = 25;
 };
 
+Thermostat.prototype.powerSavingToggle = function() {
+  if (this.powerSavingMode) { this.powerSavingOff() } else { this.powerSavingOn() }
+};
+
 Thermostat.prototype.powerSavingOff = function () {
   this.powerSavingMode = false;
   this.maxtemp = 32;
