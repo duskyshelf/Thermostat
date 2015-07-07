@@ -1,11 +1,16 @@
 thermostat = new Thermostat();
 
 var ThermoTempUpdate = function() {
-  document.getElementById('thermostat').innerHTML = thermostat.temperature
+  document.getElementById('thermostat').innerHTML = thermostat.temperature;
+  if (thermostat.temperature <= 17) { document.getElementById('thermostat').style.color = "blue"; }
+  if (thermostat.temperature >= 18) { document.getElementById('thermostat').style.color = "green"; }
+  if (thermostat.temperature >= 26) { document.getElementById('thermostat').style.color = "orange"; }
+  if (thermostat.temperature >= 30) { document.getElementById('thermostat').style.color = "red"; }
 };
 
 var ThermoAppRaise = function() {
   thermostat.raise();
+
   ThermoTempUpdate();
 };
 
