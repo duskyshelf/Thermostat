@@ -28,6 +28,7 @@ var ThermoAppPowerSavingToggle = function() {
   ThermoTempUpdate();
 };
 
+ThermoTempUpdate();
 document.getElementById('raiseButton').onclick = ThermoAppRaise;
 document.getElementById('lowerButton').onclick = ThermoAppLower;
 document.getElementById('resetButton').onclick = ThermoAppReset;
