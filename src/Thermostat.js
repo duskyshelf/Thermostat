@@ -1,4 +1,4 @@
-var Thermostat = function(){
+var Thermostat = function() {
   this.temperature = 20;
   this.powerSavingMode = true;
   this.maxtemp = 25;
