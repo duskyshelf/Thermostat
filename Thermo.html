@@ -10,13 +10,16 @@
   </head>
 
   <body>
-    <div id='thermostat'></div>&#8451
+    <div id="thermoWrapper"><div id='thermostat'></div>&#8451 </div>
     </br>
-
-    <button id='raiseButton'> Tmp up </button>
-    <button id='lowerButton'> Tmp down </button>
-    <input type="checkbox" id="powerSaving" checked> Power-saving mode </br>
-    <button id='resetButton'> Reset </button>
+    <div id="buttonRack">
+      <button id='raiseButton'> Tmp up </button>
+      <button id='lowerButton'> Tmp down </button>
+      <button id='resetButton'> Reset </button>
+    </div>
+    <div id="powersaveRack">
+       <input type="checkbox" id="powerSaving" checked> Power-saving mode
+    </div>
 
     <script src="src/Thermostat.js"></script>
     <script src="src/app.js"></script>
