@@ -1,13 +1,13 @@
 #thermostat {
-  color: green;
-  font-size: 30pt;
   display: inline-block;
+  font-size: 30pt;
 }
 
 #thermoWrapper {
   width: auto;
   text-align: center;
   background-color: lightgrey;
+  font-size: 20pt;
 }
 
 #buttonRack {
