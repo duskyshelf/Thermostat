@@ -1,11 +1,10 @@
 var thermostat = new Thermostat();
 
+var colors = {low: 'blue', medium: 'green', high: 'orange', vhigh: 'red'}
+
 var ThermoTempUpdate = function() {
-  document.getElementById('thermostat').innerHTML = thermostat.temperature;
-  if (thermostat.temperature <= 17) { document.getElementById('thermostat').style.color = "blue"; }
-  if (thermostat.temperature >= 18) { document.getElementById('thermostat').style.color = "green"; }
-  if (thermostat.temperature >= 26) { document.getElementById('thermostat').style.color = "orange"; }
-  if (thermostat.temperature >= 30) { document.getElementById('thermostat').style.color = "red"; }
+  $( "#thermostat" ).html(thermostat.temperature);
+  $( "#thermostat" ).css("color", colors[thermostat.powerLevel()]);
 };
 
 var ThermoAppRaise = function() {
@@ -29,7 +28,11 @@ var ThermoAppPowerSavingToggle = function() {
 };
 
 ThermoTempUpdate();
-document.getElementById('raiseButton').onclick = ThermoAppRaise;
-document.getElementById('lowerButton').onclick = ThermoAppLower;
-document.getElementById('resetButton').onclick = ThermoAppReset;
-document.getElementById('powerSaving').onchange = ThermoAppPowerSavingToggle;
+
+$('#raiseButton').click(ThermoAppRaise);
+
+$('#lowerButton').click(ThermoAppLower);
+
+$('#resetButton').click(ThermoAppReset);
+
+$('#powerSaving').change(ThermoAppPowerSavingToggle);

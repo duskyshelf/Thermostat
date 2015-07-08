@@ -30,3 +30,10 @@ Thermostat.prototype.lower = function () {
 Thermostat.prototype.resetButton = function () {
   this.temperature = 20;
 };
+
+Thermostat.prototype.powerLevel = function() {
+  if (thermostat.temperature <= 16) { return "low"; }
+  if (thermostat.temperature >= 28) { return "vhigh"; }
+  if (thermostat.temperature >= 24) { return "high"; }
+  if (thermostat.temperature >= 17) { return "medium"; }
+};
