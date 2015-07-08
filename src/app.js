@@ -37,8 +37,12 @@ var ThermoAppFahreinheitToggle = function() {
   ThermoTempUpdate();
 };
 
-ThermoTempUpdate();
+$.getJSON('http://api.openweathermap.org/data/2.5/find?q=London', {}, function (response) {
+ $( "#currenttemp" ).html(response.list[0].main.temp);
+});
 
+
+ThermoTempUpdate();
 
 $('#raiseButton').click(ThermoAppRaise);
 
